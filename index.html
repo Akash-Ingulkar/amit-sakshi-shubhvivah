@@ -285,6 +285,56 @@ body.opened .h-anim{animation:rise 1.1s cubic-bezier(.2,.7,.2,1) forwards;animat
 .btn.alt{background:linear-gradient(135deg,#fff3c4,#d4a537);color:var(--maroon)}
 .btn svg{width:18px;height:18px}
 
+/* ============ वर-वधू cards ============ */
+.vv{text-align:center;padding-top:84px}
+.vv-row{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:460px;margin:0 auto}
+.pcard{cursor:pointer;outline:none;perspective:1100px;-webkit-tap-highlight-color:transparent}
+.pcard.reveal.fromL:not(.in){transform:translate(-70px,20px) rotate(-10deg) scale(.9)}
+.pcard.reveal.fromR:not(.in){transform:translate(70px,20px) rotate(10deg) scale(.9)}
+.pcard.reveal{transition-duration:1.2s}
+.pcard.fromR{transition-delay:.25s}
+.pc-float{animation:pfloat 5s ease-in-out infinite}
+.pcard.fromR .pc-float{animation-delay:-2.5s}
+@keyframes pfloat{50%{transform:translateY(-9px) rotate(.6deg)}}
+.pc-in{position:relative;aspect-ratio:3/4.3;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.3,.7,.2,1)}
+.pcard.flip .pc-in{transform:rotateY(180deg)}
+.pcard:focus-visible .pc-in{outline:3px solid var(--kumkum);outline-offset:4px;border-radius:20px}
+.pc-face{position:absolute;inset:0;border-radius:20px;overflow:hidden;padding:6px;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  background:linear-gradient(135deg,#fff3c4,#d4a537 30%,#8a6110 58%,#f3d27a 80%,#b8860b);
+  box-shadow:0 28px 46px -24px var(--pc,rgba(107,11,27,.9))}
+.pc-front img{width:100%;height:100%;object-fit:cover;border-radius:15px;display:block}
+.pc-front::before{content:"";position:absolute;inset:12px;z-index:2;border:1px solid rgba(255,233,168,.75);border-radius:10px;pointer-events:none}
+.pc-front::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+  background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.55) 50%,transparent 65%);transform:translateX(-130%);
+  animation:pshine 5.5s ease-in-out infinite;animation-delay:var(--sd,1.5s)}
+@keyframes pshine{0%,62%{transform:translateX(-130%)}85%,100%{transform:translateX(130%)}}
+.pc-tag{position:absolute;top:14px;left:50%;z-index:4;transform:translateX(-50%);padding:2px 16px;border-radius:999px;font-weight:700;font-size:15px;
+  color:#5a0815;background:linear-gradient(135deg,#fff3c4,#d4a537);box-shadow:0 4px 12px rgba(0,0,0,.35)}
+.pc-name{position:absolute;left:6px;right:6px;bottom:6px;z-index:2;padding:56px 6px 14px;border-radius:0 0 15px 15px;
+  background:linear-gradient(transparent,var(--pcd,rgba(70,5,18,.92)));font-family:'Tiro Devanagari Marathi',serif;color:#ffe9a8;line-height:1.1}
+.pc-name small{display:block;font-size:14px;color:#f3d27a;margin-bottom:2px}
+.pc-name span{font-size:clamp(28px,calc(8 * var(--vw)),36px);text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.pc-back{transform:rotateY(180deg)}
+.pc-back .bk{position:relative;height:100%;border-radius:15px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  padding:42px 12px 16px;color:#fff1cf;background:radial-gradient(ellipse at 50% 30%,var(--b1,#a3192f),var(--b2,#5a0815) 75%)}
+.pc-back .bk::before{content:"";position:absolute;inset:6px;border:1px dashed rgba(243,210,122,.5);border-radius:10px;pointer-events:none}
+.pc-back b{font-family:'Tiro Devanagari Marathi',serif;font-weight:400;font-size:26px;color:#ffe9a8;line-height:1.2}
+.pc-back b small{display:block;font-size:14px;color:#f3d27a;margin-bottom:2px}
+.vv-row:has(.flip) .vv-rings{opacity:0;transform:scale(.6)}
+.vv-rings{transition:opacity .4s,transform .4s}
+.pc-back p{font-size:13.5px;line-height:1.5;color:#ffe3b0}
+.pc-back .ad{margin-top:4px;padding-top:8px;border-top:1px solid rgba(243,210,122,.4);color:#f3d27a;font-weight:600}
+.pcard.bride{--pc:rgba(166,30,77,.9);--pcd:rgba(110,10,55,.92);--b1:#c2255c;--b2:#5f0f40}
+.pcard.bride .pc-front img{object-position:50% 28%}
+.pcard.groom .pc-front img{object-position:50% 12%}
+.vv-rings{position:absolute;left:50%;top:44%;z-index:5;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;display:grid;place-items:center;
+  color:#7a0e1f;background:radial-gradient(circle at 35% 30%,#fff3c4,#d4a537 60%,#9c6d12);box-shadow:0 0 0 4px var(--cream),0 0 0 5px var(--gold),0 10px 24px rgba(0,0,0,.35);
+  animation:beat2 2s ease-in-out infinite;pointer-events:none}
+.vv-rings svg{width:40px}
+@keyframes beat2{50%{transform:scale(1.1);box-shadow:0 0 0 4px var(--cream),0 0 0 5px var(--gold),0 0 0 14px rgba(212,165,55,.25)}}
+.vv-hint{display:inline-flex;align-items:center;gap:6px;margin-top:22px;font-size:14px;color:var(--muted)}
+.vv-hint svg{width:18px;height:18px;animation:bob 1.6s ease-in-out infinite}
+
 /* ============ gallery / video ============ */
 .jodi{text-align:center;padding-top:84px}
 .jodi .sub{font-family:'Tiro Devanagari Marathi',serif;font-size:20px;color:var(--kumkum);margin:-22px 0 30px}
@@ -486,6 +536,47 @@ footer .names{font-family:'Tiro Devanagari Marathi',serif;font-size:clamp(28px,c
   <div class="scroll-cue h-anim" style="--d:9">खाली सरकवा
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
 </header>
+
+<!-- ================= वर-वधू (flip cards) ================= -->
+<section class="sec vv">
+  <h2 class="sec-title reveal">वर-वधू</h2>
+  <div class="orn reveal"><span></span><svg class="orn-ic"></svg><span></span></div>
+  <div class="vv-row" id="vvRow">
+    <div class="pcard groom reveal fromL" tabindex="0" role="button" aria-label="चि. अमित — माहिती पहा">
+      <div class="pc-float"><div class="pc-in">
+        <div class="pc-face pc-front" style="--sd:1.2s">
+          <img src="photos/amit.jpg" alt="चि. अमित" loading="lazy">
+          <span class="pc-tag">वर</span>
+          <div class="pc-name"><small>चि.</small><span>अमित</span></div>
+        </div>
+        <div class="pc-face pc-back"><div class="bk">
+          <span class="pc-tag">वर</span>
+          <b><small>चि.</small>अमित</b>
+          <p>कै. प्रकाश बाळु इंगुळकर यांचे कनिष्ठ चिरंजीव</p>
+          <p>कै. बाळु खंडु इंगुळकर यांचा नातु</p>
+          <p class="ad">रा. अडवली, ता. राजगड, जि. पुणे</p>
+        </div></div>
+      </div></div>
+    </div>
+    <div class="pcard bride reveal fromR" tabindex="0" role="button" aria-label="चि. सौ. कां. साक्षी — माहिती पहा">
+      <div class="pc-float"><div class="pc-in">
+        <div class="pc-face pc-front" style="--sd:2.4s">
+          <img src="photos/sakshi.webp" alt="चि. सौ. कां. साक्षी" loading="lazy">
+          <span class="pc-tag">वधू</span>
+          <div class="pc-name"><small>चि. सौ. कां.</small><span>साक्षी</span></div>
+        </div>
+        <div class="pc-face pc-back"><div class="bk">
+          <span class="pc-tag">वधू</span>
+          <b><small>चि. सौ. कां.</small>साक्षी</b>
+          <p>श्री. संजय जगन्नाथ यादव यांची जेष्ठ कन्या</p>
+          <p class="ad">रा. हरणी, ता. पुरंधर, जि. पुणे</p>
+        </div></div>
+      </div></div>
+    </div>
+    <div class="vv-rings" aria-hidden="true"><svg viewBox="0 0 76 36" fill="none" stroke="currentColor" stroke-width="3"><circle cx="27" cy="18" r="13"/><circle cx="49" cy="18" r="13"/></svg></div>
+  </div>
+  <p class="vv-hint reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11V5a2 2 0 0 1 4 0v5m0-1a2 2 0 0 1 4 0v2m0-1a2 2 0 0 1 4 0v4a7 7 0 0 1-7 7h-1a7 7 0 0 1-6-3.4L4 14a2 2 0 0 1 3.4-2L9 14"/></svg>माहिती पाहण्यासाठी फोटोवर टॅप करा</p>
+</section>
 
 <!-- ================= COUPLE PHOTOS (shown when CONFIG.photos has files) ================= -->
 <section class="sec jodi" id="gallerySec" hidden>
@@ -821,6 +912,22 @@ const io = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
 }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
 $$('.reveal').forEach(el => io.observe(el));
+
+/* वर-वधू flip cards */
+$$('.pcard').forEach(c => {
+  c.addEventListener('click', () => c.classList.toggle('flip'));
+  c.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); c.classList.toggle('flip'); } });
+});
+// one-time teaser: flip both cards briefly when the section first comes into view
+const vvIo = new IntersectionObserver(es => {
+  if (!es[0].isIntersecting) return;
+  vvIo.disconnect();
+  if (reduce) return;
+  const cs = $$('.pcard');
+  cs.forEach((c, i) => setTimeout(() => c.classList.add('flip'), 2000 + i * 350));
+  cs.forEach((c, i) => setTimeout(() => c.classList.remove('flip'), 4800 + i * 350));
+}, { threshold: .6 });
+vvIo.observe($('#vvRow'));
 
 /* timeline rail fill */
 const tl = $('#tl'), rail = $('#tl .rail i');
