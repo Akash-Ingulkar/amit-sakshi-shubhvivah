@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="mr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>शुभविवाह · चि. अमित आणि चि. सौ. कां. साक्षी</title>
+<meta name="description" content="बुधवार, दि. २५/११/२०२६ रोजी सायं. ६ वा. १८ मि. · ज्ञानेश्वर मंगल कार्यालय, अडवली, ता. राजगड, जि. पुणे">
+<meta property="og:title" content="शुभविवाह · चि. अमित आणि चि. सौ. कां. साक्षी">
+<meta property="og:description" content="बुधवार, दि. २५/११/२०२६ · सायं. ६ वा. १८ मि. · ज्ञानेश्वर मंगल कार्यालय, अडवली">
+<!-- After hosting, add a cover photo for WhatsApp preview (must be a full https URL):
+<meta property="og:image" content="https://YOUR-SITE/photos/cover.jpg"> -->
+<meta name="theme-color" content="#6b0b1b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&family=Tiro+Devanagari+Marathi:ital@0;1&family=Yatra+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#6b0b1b; --maroon2:#8e1428; --kumkum:#c0142f; --gold:#d4a537; --gold2:#f3d27a;
+  --haldi:#f5b416; --cream:#fff7e8; --paper:#fffaf1; --ink:#3b1a10; --muted:#7a5a48; --leaf:#2f7a2a;
+}
+:root{--vw:1vw}
+*{box-sizing:border-box;margin:0;padding:0}
+
+/* ===== mobile-app layout: on tablets/desktop the page is a centred phone-width column ===== */
+@media (min-width:560px){
+  :root{--vw:4.8px}
+  html{background:#1e0207}
+  html::before{content:"";position:fixed;inset:-60px;z-index:-1;
+    background:url("photos/2.jpg") center 30%/cover;filter:blur(28px) brightness(.42) saturate(1.25)}
+  html::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:radial-gradient(ellipse at center,transparent 30%,rgba(20,1,5,.75))}
+  body{max-width:480px;margin:0 auto;position:relative;
+    box-shadow:0 0 0 1px rgba(212,165,55,.5),0 0 0 7px rgba(30,2,7,.6),0 0 0 8px rgba(212,165,55,.35),0 30px 90px rgba(0,0,0,.7)}
+  #musicBtn{right:calc(50% - 240px + 16px)}
+}
+html,body{overflow-x:clip}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Mukta',sans-serif;font-size:17px;line-height:1.75;color:var(--ink);
+  background-color:var(--cream);
+  background-image:radial-gradient(circle at 1px 1px,rgba(176,120,30,.14) 1px,transparent 0);
+  background-size:22px 22px;
+}
+body.locked{overflow:hidden;height:100svh}
+img{max-width:100%;display:block}
+button{font:inherit;cursor:pointer}
+
+/* ============ gold text ============ */
+.gold-text{
+  background:linear-gradient(100deg,#a8740a 0%,#ffe9a8 25%,#d4a537 45%,#fff5cf 60%,#b8860b 80%,#ffe9a8 100%);
+  background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shimmer 6s linear infinite;
+}
+@keyframes shimmer{to{background-position:-220% center}}
+
+/* ============ GATE (opening doors) ============ */
+#gate{position:fixed;inset:0;z-index:100;display:flex;perspective:1800px;background:#2a0309}
+.door{
+  position:relative;width:50%;height:100%;overflow:hidden;
+  background:
+    radial-gradient(ellipse at 50% 50%,rgba(255,200,90,.10),transparent 60%),
+    linear-gradient(160deg,#8e1428,#5a0815 60%,#3c0610);
+  transition:transform 2.2s cubic-bezier(.7,0,.25,1);
+  backface-visibility:hidden;
+}
+.door.l{transform-origin:left center;box-shadow:inset -10px 0 30px rgba(0,0,0,.45)}
+.door.r{transform-origin:right center;box-shadow:inset 10px 0 30px rgba(0,0,0,.45)}
+.door::before,.door::after{content:"";position:absolute;border:2px solid var(--gold);opacity:.75;pointer-events:none}
+.door::before{inset:16px}
+.door::after{inset:24px;border-width:1px;opacity:.45}
+.door .dm{position:absolute;top:50%;width:min(calc(150 * var(--vw)),150vh);aspect-ratio:1;color:var(--gold);opacity:.32;transform:translateY(-50%)}
+.door.l .dm{right:0;transform:translate(50%,-50%)}
+.door.r .dm{left:0;transform:translate(-50%,-50%)}
+.door .knob{position:absolute;top:78%;width:18px;height:18px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#fff3c4,#d4a537 50%,#7a5310);box-shadow:0 0 12px rgba(255,210,120,.7)}
+.door.l .knob{right:34px}.door.r .knob{left:34px}
+#gate.open .door.l{transform:rotateY(-108deg)}
+#gate.open .door.r{transform:rotateY(108deg)}
+#gate.open{background:transparent;pointer-events:none;transition:background .6s}
+#gate.gone{display:none}
+
+.toran{position:fixed;top:0;left:0;right:0;z-index:102;display:flex;justify-content:space-around;pointer-events:none;transition:opacity .8s,transform 1.2s}
+.toran::before{content:"";position:absolute;top:6px;left:0;right:0;height:3px;background:linear-gradient(90deg,#b8860b,#ffe9a8,#b8860b)}
+.strand{display:flex;flex-direction:column;align-items:center;transform-origin:top center;animation:swing 3.2s ease-in-out infinite alternate;animation-delay:var(--d)}
+.mg{width:24px;height:24px;border-radius:50%;margin-top:-4px;
+  background:radial-gradient(circle at 45% 40%,#ffe066 0 18%,#f59e0b 40%,#e8590c 75%,#b33c00 100%);
+  box-shadow:inset 0 0 0 3px rgba(255,190,40,.45),0 2px 4px rgba(0,0,0,.3)}
+.mg:first-child{margin-top:6px}
+.mg.y{background:radial-gradient(circle at 45% 40%,#fff3a0 0 18%,#ffd43b 45%,#f59f00 80%,#c77700 100%)}
+.lf{width:14px;height:30px;margin-top:-2px;background:linear-gradient(160deg,#4caf50,#1b5e20);border-radius:0 100% 0 100%;transform:rotate(-12deg)}
+@keyframes swing{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
+body.opened .toran{opacity:0;transform:translateY(-60px)}
+
+.gate-c{position:fixed;inset:0;z-index:101;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:90px 16px 24px;color:var(--gold2);transition:opacity .7s,transform .9s}
+body.opened .gate-c{opacity:0;transform:scale(1.15);pointer-events:none}
+.g-om{font-family:'Tiro Devanagari Marathi',serif;font-size:64px;line-height:1;text-shadow:0 0 24px rgba(255,200,90,.6);animation:glow 2.6s ease-in-out infinite alternate}
+@keyframes glow{from{text-shadow:0 0 10px rgba(255,200,90,.35)}to{text-shadow:0 0 34px rgba(255,210,110,.9)}}
+.g-small{font-size:16px;letter-spacing:.5px;margin-top:6px;opacity:.9}
+.g-title{font-family:'Yatra One',cursive;font-size:clamp(52px,calc(14 * var(--vw)),96px);line-height:1.2;margin:10px 0 2px}
+.g-names{font-family:'Tiro Devanagari Marathi',serif;font-size:clamp(26px,calc(7 * var(--vw)),40px);color:#fff1cf}
+.g-names span{color:var(--gold);margin:0 10px;font-size:.7em;vertical-align:middle}
+.g-to{margin-top:14px;font-size:18px;color:#ffe3b0;min-height:1.6em}
+#openBtn{
+  position:relative;margin-top:26px;border:0;border-radius:999px;padding:14px 34px;font-size:20px;font-weight:600;color:var(--maroon);
+  background:linear-gradient(135deg,#fff3c4,#d4a537 55%,#b8860b);box-shadow:0 10px 30px rgba(0,0,0,.4),inset 0 1px 0 #fff;
+  transition:transform .2s;
+}
+#openBtn:hover{transform:scale(1.05)}
+#openBtn::after{content:"";position:absolute;inset:-6px;border-radius:inherit;border:2px solid var(--gold2);animation:pulse 2s infinite}
+@keyframes pulse{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.35)}}
+
+/* ============ petals ============ */
+#petals{position:fixed;inset:0;width:100%;height:100%;z-index:60;pointer-events:none}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:56px 16px 90px;overflow:hidden;color:var(--gold2);
+  background:#2a0309 url("photos/2.jpg") center 30%/cover;
+}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;z-index:0}
+.hero-shade{position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(ellipse 75% 55% at 50% 50%,rgba(25,2,6,.58),rgba(25,2,6,.2) 70%,transparent),
+    linear-gradient(rgba(25,2,6,.45),transparent 22%,transparent 72%,rgba(25,2,6,.6))}
+.hero-frame{position:absolute;inset:14px;z-index:0;border:1.5px solid rgba(243,210,122,.75);border-radius:6px;pointer-events:none}
+.hero-frame::after{content:"";position:absolute;inset:6px;border:1px solid rgba(243,210,122,.35);border-radius:3px}
+.hero p,.hero .who .pre,.hero .om{text-shadow:0 2px 10px rgba(0,0,0,.75),0 0 2px rgba(0,0,0,.6)}
+.hero .gold-text{filter:drop-shadow(0 2px 3px rgba(0,0,0,.85)) drop-shadow(0 4px 14px rgba(0,0,0,.6))}
+.hero .date-badge{background:rgba(40,4,10,.35);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.hero .scroll-cue{text-shadow:0 1px 6px rgba(0,0,0,.8)}
+.hero .mand{position:absolute;top:50%;left:50%;width:min(calc(135 * var(--vw)),980px);aspect-ratio:1;color:var(--gold);opacity:.2;
+  transform:translate(-50%,-50%);animation:spin 140s linear infinite}
+.hero .mand.small{width:min(calc(80 * var(--vw)),560px);opacity:.16;animation-duration:90s;animation-direction:reverse}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.hero > *:not(.mand):not(.hero-bg):not(.hero-shade):not(.hero-frame){position:relative}
+/* room so matras (ि ी ॅ) aren't clipped by background-clip:text */
+.gold-text{padding:.18em .12em .06em;margin:-.18em -.12em -.06em}
+.couple .nm{display:inline-block}
+.deities{font-size:14px;line-height:1.9;color:#ffd99a;max-width:640px}
+.hero .om{font-family:'Tiro Devanagari Marathi',serif;font-size:58px;line-height:1.1;margin-top:16px;color:var(--gold2);animation:glow 2.6s ease-in-out infinite alternate}
+.hero .ganesh{font-size:19px;color:#ffe3b0}
+.hero h2{font-family:'Yatra One',cursive;font-size:clamp(54px,calc(15 * var(--vw)),110px);line-height:1.15;margin:6px 0 10px}
+.couple{display:flex;flex-direction:column;align-items:center;gap:4px}
+.couple .who{font-family:'Tiro Devanagari Marathi',serif;color:#fff1cf}
+.couple .pre{display:block;font-size:16px;color:var(--gold2);letter-spacing:.5px}
+.couple .nm{font-size:clamp(44px,calc(12 * var(--vw)),78px);line-height:1.15}
+.rings{width:76px;color:var(--gold);margin:4px 0}
+.rings circle{animation:ringpulse 3s ease-in-out infinite}
+.rings circle:last-child{animation-delay:1.5s}
+@keyframes ringpulse{50%{stroke-width:3}}
+.families{margin-top:10px;font-size:17px;color:#ffd99a}
+.date-badge{margin-top:22px;display:inline-block;padding:10px 22px;border:1px solid var(--gold);border-radius:12px;
+  background:rgba(0,0,0,.18);font-size:18px;color:#fff1cf;box-shadow:inset 0 0 20px rgba(212,165,55,.15)}
+.date-badge b{color:var(--gold2);font-weight:600}
+.scroll-cue{position:absolute!important;bottom:22px;left:0;right:0;font-size:14px;color:#ffd99a;display:flex;flex-direction:column;align-items:center;opacity:.85}
+.scroll-cue svg{width:22px;animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(7px)}}
+
+.h-anim{opacity:0;transform:translateY(26px)}
+body.opened .h-anim{animation:rise 1.1s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--d,0) * .22s + .9s)}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* ============ sections ============ */
+.sec{padding:76px 16px;max-width:1000px;margin:0 auto}
+.sec-title{font-family:'Yatra One',cursive;color:var(--maroon);font-size:clamp(30px,calc(7 * var(--vw)),46px);text-align:center;line-height:1.3}
+.sec-sub{text-align:center;color:var(--muted);margin-top:4px}
+.orn{display:flex;align-items:center;justify-content:center;gap:12px;margin:14px auto 34px;color:var(--gold)}
+.orn span{height:1px;width:min(110px,calc(22 * var(--vw)));background:linear-gradient(90deg,transparent,var(--gold))}
+.orn span:last-child{transform:scaleX(-1)}
+.orn svg{width:30px;height:30px;animation:spin2 12s linear infinite}
+@keyframes spin2{to{transform:rotate(360deg)}}
+
+.card{position:relative;background:var(--paper);border:2px solid var(--gold);border-radius:6px;padding:30px 22px;
+  box-shadow:0 0 0 6px var(--paper),0 0 0 7px rgba(212,165,55,.6),0 26px 50px -26px rgba(107,11,27,.45)}
+.card .cn{position:absolute;width:38px;height:38px;color:var(--gold)}
+.card .cn.tl{top:-4px;left:-4px}.card .cn.tr{top:-4px;right:-4px;transform:scaleX(-1)}
+.card .cn.bl{bottom:-4px;left:-4px;transform:scaleY(-1)}.card .cn.br{bottom:-4px;right:-4px;transform:scale(-1)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i,0) * 60ms)}
+.reveal.zoom{transform:scale(.88)}
+.reveal.left{transform:translateX(-40px)}
+.reveal.right{transform:translateX(40px)}
+.reveal.in{opacity:1;transform:none}
+
+/* ============ countdown ============ */
+.cd-wrap{background:linear-gradient(135deg,#6b0b1b,#8e1428);color:#fff1cf;position:relative;overflow:hidden}
+.cd-wrap .mand{position:absolute;right:-180px;top:-180px;width:460px;color:var(--gold);opacity:.14;animation:spin2 120s linear infinite}
+.cd-wrap .sec-title{color:var(--gold2)}
+.cd-wrap .sec-sub{color:#ffd99a}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:620px;margin:0 auto}
+.cd div{background:rgba(255,255,255,.06);border:1px solid rgba(212,165,55,.55);border-radius:14px;padding:16px 4px;text-align:center}
+.cd b{display:block;font-family:'Tiro Devanagari Marathi',serif;font-size:clamp(34px,calc(9 * var(--vw)),56px);line-height:1.1;color:var(--gold2);font-weight:400}
+.cd b.tick{animation:tick .5s}
+@keyframes tick{0%{transform:translateY(-8px);opacity:.3}100%{transform:none;opacity:1}}
+.cd span{font-size:15px;color:#ffe3b0}
+.cd-done{text-align:center;font-family:'Yatra One',cursive;font-size:30px;color:var(--gold2)}
+
+/* ============ letter ============ */
+.letter{text-align:center;max-width:760px;margin:0 auto}
+.letter .deity{color:var(--kumkum);font-weight:600;font-size:15px}
+.letter .salut{margin:12px 0 22px;font-size:18px}
+.person{margin:6px 0 4px}
+.person h3{font-family:'Tiro Devanagari Marathi',serif;font-weight:400;font-size:clamp(34px,calc(9 * var(--vw)),50px);color:var(--maroon);line-height:1.2}
+.person h3 small{font-size:.48em;color:var(--kumkum);margin-right:6px}
+.person p{color:var(--muted);font-size:16px;max-width:560px;margin:4px auto 0}
+.amp{margin:16px auto;width:64px;color:var(--gold)}
+.yancha{font-family:'Yatra One',cursive;color:var(--kumkum);font-size:26px;margin:18px 0 6px}
+.miti{font-weight:600;font-size:18px}
+.miti .hl{color:var(--maroon);background:linear-gradient(transparent 60%,rgba(245,180,22,.35) 60%)}
+.verse{margin-top:22px;font-family:'Tiro Devanagari Marathi',serif;font-style:italic;font-size:19px;line-height:1.95;color:#5a2a18;
+  border-top:1px dashed rgba(212,165,55,.7);padding-top:20px}
+
+/* ============ events ============ */
+.date-line{text-align:center;margin:-14px 0 30px;font-size:18px;color:var(--maroon);font-weight:600}
+.tl{position:relative;max-width:660px;margin:0 auto}
+.tl .rail{position:absolute;left:25px;top:0;bottom:0;width:2px;background:rgba(212,165,55,.25)}
+.tl .rail i{position:absolute;inset:0;background:linear-gradient(var(--gold),var(--kumkum));transform-origin:top;transform:scaleY(var(--p,0))}
+.ev{position:relative;padding-left:70px;margin-bottom:26px}
+.ev .dot{position:absolute;left:4px;top:14px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  background:var(--maroon);color:var(--gold2);box-shadow:0 0 0 4px var(--cream),0 0 0 5px var(--gold)}
+.ev .dot svg{width:22px;height:22px}
+.ev{--c1:#d4a537;--c2:#8e1428;--tint:#fff8ec}
+.ev.e1{--c1:#f06595;--c2:#a61e4d;--tint:#fff0f6}
+.ev.e2{--c1:#fcc419;--c2:#e67700;--tint:#fff9db}
+.ev.e3{--c1:#51cf66;--c2:#2b8a3e;--tint:#f0fbf3}
+.ev .dot{background:linear-gradient(140deg,var(--c1),var(--c2))!important;color:#fff!important}
+.ev .box{position:relative;overflow:hidden;border-radius:18px;padding:18px 20px 18px 24px;
+  border:1.5px solid transparent;
+  background:linear-gradient(135deg,#fff,var(--tint)) padding-box,linear-gradient(135deg,var(--c1),#f3d27a 45%,var(--c2)) border-box;
+  box-shadow:0 18px 34px -22px var(--c2);transition:transform .3s,box-shadow .3s}
+.ev .box::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(var(--c1),var(--c2))}
+.ev .box::after{content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;border-radius:50%;opacity:.12;
+  background:repeating-radial-gradient(circle,var(--c2) 0 2px,transparent 2px 8px)}
+.ev .box:hover{transform:translateY(-4px);box-shadow:0 26px 44px -22px var(--c2)}
+.ev h4{font-family:'Yatra One',cursive;font-weight:400;font-size:25px;color:var(--c2);line-height:1.3}
+.ev .time{display:inline-block;margin:4px 0 2px;font-size:17px;font-weight:600;color:#fff;padding:2px 14px;border-radius:999px;background:linear-gradient(90deg,var(--c2),var(--c1))}
+.ev .where{color:var(--muted);font-size:15px}
+.ev.main .box{background:linear-gradient(135deg,#6b0b1b,#a3192f);border-color:var(--gold);color:#fff1cf}
+.ev.main h4{color:var(--gold2);font-size:30px}
+.ev.main .time{color:#5a0815;background:linear-gradient(90deg,#f3d27a,#fff3c4)}
+.ev.main .box::before{background:linear-gradient(#fff3c4,#d4a537)}
+.ev.main .box{background:linear-gradient(135deg,#8e1428,#5a0815) padding-box,linear-gradient(135deg,#fff3c4,#d4a537,#8a6110) border-box}
+.ev.main .where{color:#ffd99a}
+.ev.main .dot{background:linear-gradient(140deg,#fff3c4,#d4a537)!important;color:var(--maroon)!important;animation:beat 1.6s ease-in-out infinite}
+@keyframes beat{50%{box-shadow:0 0 0 4px var(--cream),0 0 0 5px var(--gold),0 0 0 14px rgba(212,165,55,.25)}}
+
+/* ============ venue ============ */
+.venue{display:grid;gap:22px;grid-template-columns:1fr}
+.venue .info{text-align:center;display:flex;flex-direction:column;justify-content:center}
+.venue .info h3{font-family:'Tiro Devanagari Marathi',serif;font-weight:400;font-size:32px;color:var(--maroon);line-height:1.3}
+.venue .info p{color:var(--muted);font-size:18px}
+.map{border-radius:14px;overflow:hidden;border:2px solid var(--gold);min-height:300px;background:#efe3cc}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border:0;border-radius:999px;padding:11px 22px;font-size:17px;font-weight:600;
+  background:var(--maroon);color:var(--gold2);box-shadow:0 8px 18px -10px rgba(107,11,27,.8);transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:var(--kumkum)}
+.btn.alt{background:linear-gradient(135deg,#fff3c4,#d4a537);color:var(--maroon)}
+.btn svg{width:18px;height:18px}
+
+/* ============ gallery / video ============ */
+.jodi{text-align:center;padding-top:84px}
+.jodi .sub{font-family:'Tiro Devanagari Marathi',serif;font-size:20px;color:var(--kumkum);margin:-22px 0 30px}
+.arch-wrap{position:relative;width:min(100%,410px);margin:0 auto}
+.arch-wrap .mand{position:absolute;left:50%;top:45%;width:150%;aspect-ratio:1;color:var(--gold);opacity:.4;z-index:0;
+  transform:translate(-50%,-50%);animation:spin 100s linear infinite;pointer-events:none}
+.arch-wrap .glow{position:absolute;inset:6% -4% 0;border-radius:50% 50% 30px 30px;background:radial-gradient(ellipse at 50% 40%,rgba(245,180,22,.45),transparent 70%);filter:blur(24px);z-index:0}
+.arch{position:relative;z-index:1;display:block;width:100%;aspect-ratio:3/4;padding:9px;border:0;cursor:zoom-in;
+  border-radius:999px 999px 22px 22px/320px 320px 22px 22px;
+  background:linear-gradient(135deg,#fff3c4,#d4a537 28%,#8a6110 55%,#f3d27a 75%,#b8860b);
+  box-shadow:0 34px 60px -30px rgba(107,11,27,.85),0 0 0 1px rgba(138,97,16,.5)}
+.arch .frame{position:relative;width:100%;height:100%;overflow:hidden;background:#3a0510;
+  border-radius:999px 999px 14px 14px/312px 312px 14px 14px}
+.arch img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;opacity:0;transform:scale(1.12);transition:opacity 1.6s ease}
+.arch img.on{opacity:1;animation:kb 7.5s ease-out forwards}
+@keyframes kb{from{transform:scale(1.14)}to{transform:scale(1)}}
+.arch .frame::before{content:"";position:absolute;inset:9px;z-index:2;pointer-events:none;border:1px solid rgba(255,233,168,.85);
+  border-radius:999px 999px 8px 8px/300px 300px 8px 8px}
+.arch .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:70px 12px 22px;pointer-events:none;
+  background:linear-gradient(transparent,rgba(58,5,16,.88));font-family:'Tiro Devanagari Marathi',serif;font-size:clamp(26px,calc(7 * var(--vw)),34px);color:#ffe9a8}
+.arch .cap span{color:var(--gold);font-size:.6em;margin:0 8px;vertical-align:middle}
+.arch-wrap .bell{position:absolute;top:-6px;z-index:2;width:22px;transform-origin:top center;animation:swing 2.4s ease-in-out infinite alternate}
+.arch-wrap .bell.l{left:18%}.arch-wrap .bell.r{right:18%;animation-delay:-1.2s}
+.arch-wrap .bell i{display:block;width:2px;height:34px;margin:0 auto;background:linear-gradient(#b8860b,#f3d27a)}
+.arch-wrap .bell b{display:block;width:22px;height:20px;border-radius:50% 50% 4px 4px;background:radial-gradient(circle at 35% 30%,#fff3c4,#d4a537 50%,#7a5310)}
+.dots{display:flex;justify-content:center;gap:10px;margin-top:22px}
+.dots button{width:11px;height:11px;border-radius:50%;border:1.5px solid var(--gold);background:transparent;padding:0;transition:all .3s}
+.dots button.on{background:var(--kumkum);border-color:var(--kumkum);width:28px;border-radius:6px}
+#lb{position:fixed;inset:0;z-index:120;background:rgba(20,2,6,.92);display:none;align-items:center;justify-content:center;padding:16px}
+#lb.on{display:flex}
+#lb img{max-height:88vh;max-width:100%;border-radius:8px;border:2px solid var(--gold);animation:pop .4s}
+@keyframes pop{from{transform:scale(.9);opacity:0}}
+#lb button{position:absolute;background:rgba(0,0,0,.4);color:var(--gold2);border:1px solid var(--gold);border-radius:50%;width:46px;height:46px;font-size:22px}
+#lb .x{top:16px;right:16px}#lb .pv{left:10px;top:50%}#lb .nx{right:10px;top:50%}
+
+/* ============ names ============ */
+.fam-wrap{position:relative;
+  background:
+    radial-gradient(ellipse at 0% 20%,rgba(11,114,133,.10),transparent 45%),
+    radial-gradient(ellipse at 100% 60%,rgba(194,37,92,.09),transparent 45%),
+    radial-gradient(ellipse at 20% 95%,rgba(245,159,0,.10),transparent 45%)}
+/* Paithani border band */
+.paithani{height:44px;
+  background:
+    conic-gradient(from -45deg at 50% 100%,#d4a537 90deg,transparent 0) 0 0/26px 13px repeat-x,
+    radial-gradient(circle,#f3d27a 2.5px,transparent 3px) 0 13px/26px 18px repeat-x,
+    linear-gradient(90deg,#0b5c6b,#0b7285,#7a1f5c,#0b7285,#0b5c6b) 0 13px/100% 18px no-repeat,
+    conic-gradient(from 135deg at 50% 0,#d4a537 90deg,transparent 0) 13px 31px/26px 13px repeat-x}
+.block{margin-bottom:64px;--c1:#d4a537;--c2:#8e1428;--tint:#fff8ec}
+.block:last-child{margin-bottom:0}
+.block h3{font-family:'Yatra One',cursive;font-weight:400;text-align:center;font-size:clamp(26px,calc(6 * var(--vw)),34px);margin-bottom:20px;
+  background:linear-gradient(90deg,var(--c2),var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.block h3::after{content:"";display:block;width:90px;height:10px;margin:4px auto 0;
+  background:radial-gradient(circle,var(--c1) 3px,transparent 3.5px) center/14px 10px repeat-x,
+    linear-gradient(90deg,transparent,var(--c2),transparent) center/100% 1.5px no-repeat}
+/* colour themes */
+.t-saffron{--c1:#f59f00;--c2:#c2410c;--tint:#fff6e6}
+.t-royal{--c1:#d4a537;--c2:#7a0e1f;--tint:#fff7ef}
+.t-peacock{--c1:#15aabf;--c2:#0b4f6c;--tint:#effbfc}
+.t-emerald{--c1:#40c057;--c2:#0b6e4f;--tint:#f0fbf3}
+.t-rani{--c1:#e64980;--c2:#862e9c;--tint:#fff0f6}
+
+/* name cards */
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.nmc{position:relative;overflow:hidden;display:flex;align-items:center;gap:14px;padding:12px 16px 12px 12px;border-radius:16px;
+  border:1.5px solid transparent;
+  background:linear-gradient(135deg,#fff,var(--tint)) padding-box,
+             linear-gradient(135deg,var(--c1),#f3d27a 40%,var(--c2)) border-box;
+  box-shadow:0 12px 26px -18px var(--c2),0 2px 0 rgba(255,255,255,.8) inset;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.nmc:hover{transform:translateY(-4px) scale(1.01);box-shadow:0 22px 36px -20px var(--c2)}
+.nmc::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.85) 50%,transparent 65%);transform:translateX(-130%)}
+.nmc.in::after{animation:shine 1.5s calc(var(--i,0) * 90ms + .25s) ease-out}
+.nmc:hover::after{animation:shine 1s ease-out}
+@keyframes shine{to{transform:translateX(130%)}}
+.nmc::before{content:"";position:absolute;right:-26px;top:-26px;width:78px;height:78px;border-radius:50%;opacity:.13;
+  background:repeating-radial-gradient(circle,var(--c2) 0 2px,transparent 2px 7px)}
+.av{flex:0 0 auto;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  font-family:'Tiro Devanagari Marathi',serif;font-size:21px;line-height:1;color:#fff;
+  background:linear-gradient(140deg,var(--c1),var(--c2));
+  box-shadow:0 0 0 2px #fff,0 0 0 3.5px #e2b552,0 6px 14px -6px var(--c2)}
+.nmc .tx{min-width:0;line-height:1.45}
+.nmc b{display:block;font-weight:600;font-size:16.5px;color:#2d1409}
+.nmc .pfx{color:var(--c2);font-weight:500;font-size:14px}
+.nmc small{display:inline-block;margin-top:3px;font-size:12.5px;font-weight:600;letter-spacing:.2px;color:#fff;
+  padding:1px 10px;border-radius:999px;background:linear-gradient(90deg,var(--c2),var(--c1))}
+
+/* आपले नम्र — royal cards */
+.pairs{display:grid;gap:16px;max-width:760px;margin:0 auto}
+.single,.pair{position:relative;overflow:hidden;border-radius:20px;color:#fff1cf;
+  border:1.5px solid transparent;
+  background:linear-gradient(135deg,#8e1428,#5a0815 70%,#3c0610) padding-box,
+             linear-gradient(135deg,#fff3c4,#d4a537 35%,#8a6110 65%,#f3d27a) border-box;
+  box-shadow:0 22px 40px -24px rgba(90,8,21,.9)}
+.single::before,.pair::before{content:"";position:absolute;inset:6px;border-radius:15px;border:1px dashed rgba(243,210,122,.35);pointer-events:none}
+.single{text-align:center;padding:22px 16px}
+.single .av{margin:0 auto 8px;width:54px;height:54px;font-size:24px;--c1:#f3d27a;--c2:#b8860b;color:#5a0815}
+.single b{font-family:'Tiro Devanagari Marathi',serif;font-weight:400;font-size:clamp(21px,calc(5 * var(--vw)),26px);color:#ffe9a8}
+.pair{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;padding:16px 18px;text-align:center}
+.pair .side{display:flex;flex-direction:column;align-items:center;gap:6px;font-weight:500;font-size:16.5px}
+.pair .av{--c1:#f3d27a;--c2:#b8860b;color:#5a0815;width:40px;height:40px;font-size:18px}
+.pair i{font-style:normal;color:#f3d27a;font-size:20px}
+@media(max-width:560px){.pair{grid-template-columns:1fr;gap:10px}.pair i{display:none}.pair .side{flex-direction:row;justify-content:center}}
+
+/* chips */
+.chips{text-align:center;max-width:880px;margin:0 auto}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:7px 16px 7px 10px;margin:5px 3px;border-radius:999px;font-size:16px;font-weight:500;
+  border:1.5px solid transparent;
+  background:linear-gradient(#fff,var(--tint)) padding-box,linear-gradient(135deg,var(--c1),var(--c2)) border-box;
+  box-shadow:0 8px 18px -14px var(--c2);transition:transform .25s}
+.chip::before{content:"";width:9px;height:9px;transform:rotate(45deg);border-radius:2px;background:linear-gradient(135deg,var(--c1),var(--c2))}
+.chip:hover{transform:translateY(-3px)}
+.chips.kids .chip{border:0;color:#fff;font-weight:600;padding:7px 16px;background-clip:border-box}
+.chips.kids .chip::before{display:none}
+.chips.kids .chip:nth-child(5n+1){background:#e8590c}.chips.kids .chip:nth-child(5n+2){background:#c2255c}
+.chips.kids .chip:nth-child(5n+3){background:#2f9e44}.chips.kids .chip:nth-child(5n+4){background:#7048e8}.chips.kids .chip:nth-child(5n){background:#1971c2}
+.chips.kids .chip.in{animation:wobble 2.8s ease-in-out infinite;animation-delay:calc(var(--i) * .2s)}
+@keyframes wobble{0%,100%{rotate:0deg}25%{rotate:-3deg}75%{rotate:3deg}}
+.chips.kal .chip{color:#862e9c;font-weight:600}
+.chips.kal .chip::before{content:"✿";width:auto;height:auto;transform:none;background:none;color:#e64980;font-size:15px}
+.request{text-align:center;font-family:'Tiro Devanagari Marathi',serif;font-size:21px;color:var(--kumkum);margin-bottom:22px}
+.org{text-align:center;font-size:19px;font-weight:600;color:var(--c2);max-width:520px;margin:10px auto 0;padding:12px 18px;border-radius:14px;
+  border:1.5px solid transparent;background:linear-gradient(135deg,#fff,var(--tint)) padding-box,linear-gradient(135deg,var(--c1),#f3d27a,var(--c2)) border-box;
+  box-shadow:0 12px 26px -18px var(--c2)}
+.request{background:linear-gradient(90deg,var(--c2),var(--c1));-webkit-background-clip:text;background-clip:text;color:transparent!important}
+
+/* ============ footer ============ */
+footer{position:relative;overflow:hidden;text-align:center;padding:80px 16px 110px;color:#fff1cf;
+  background:radial-gradient(ellipse at 50% 0%,#a3192f,#6b0b1b 55%,#3a0510)}
+footer .mand{position:absolute;left:50%;bottom:-320px;width:640px;color:var(--gold);opacity:.16;transform:translateX(-50%);animation:spinx 120s linear infinite}
+@keyframes spinx{to{transform:translateX(-50%) rotate(360deg)}}
+footer > *:not(.mand){position:relative}
+footer .big{font-family:'Yatra One',cursive;font-size:clamp(32px,calc(8 * var(--vw)),52px);line-height:1.3}
+footer p{color:#ffd99a}
+footer .names{font-family:'Tiro Devanagari Marathi',serif;font-size:clamp(28px,calc(7 * var(--vw)),40px);color:#fff1cf;margin:14px 0}
+.diyas{display:flex;justify-content:center;gap:26px;margin:20px 0 8px}
+.diya{position:relative;width:46px;height:40px}
+.diya .base{position:absolute;bottom:0;left:0;width:46px;height:20px;border-radius:0 0 30px 30px;background:linear-gradient(#e8a33c,#9c4a0f)}
+.diya .fl{position:absolute;bottom:16px;left:50%;width:14px;height:24px;margin-left:-7px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;
+  background:radial-gradient(circle at 50% 75%,#fff 0 20%,#ffd43b 45%,#f76707 90%);box-shadow:0 0 18px 6px rgba(255,180,40,.55);
+  transform-origin:50% 100%;animation:flick 1.3s ease-in-out infinite alternate}
+.diya:nth-child(2) .fl{animation-delay:.4s}.diya:nth-child(3) .fl{animation-delay:.8s}
+@keyframes flick{0%{transform:scale(1) rotate(-3deg)}50%{transform:scale(1.08,1.15) rotate(2deg)}100%{transform:scale(.95) rotate(-1deg)}}
+
+/* ============ music button ============ */
+#musicBtn{position:fixed;right:16px;bottom:16px;z-index:80;width:52px;height:52px;border-radius:50%;border:2px solid var(--gold);
+  background:var(--maroon);color:var(--gold2);display:none;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.35)}
+#musicBtn.show{display:grid}
+#musicBtn svg{width:24px;height:24px}
+#musicBtn.playing svg{animation:spin2 4s linear infinite}
+#musicBtn:not(.playing)::after{content:"";position:absolute;width:30px;height:2px;background:var(--gold2);transform:rotate(-45deg)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.2s!important}
+  .door{transition-duration:.6s!important}
+}
+</style>
+</head>
+<body class="locked">
+
+<!-- ================= GATE ================= -->
+<div class="toran" id="toran" aria-hidden="true"></div>
+<div id="gate" aria-hidden="true">
+  <div class="door l"><div class="dm mandala"></div><span class="knob"></span></div>
+  <div class="door r"><div class="dm mandala"></div><span class="knob"></span></div>
+</div>
+<div class="gate-c" id="gateC">
+  <div class="g-om">ॐ</div>
+  <p class="g-small">।। श्री गणेशाय नमः ।।</p>
+  <h1 class="g-title gold-text">शुभविवाह</h1>
+  <p class="g-names">अमित <span>❖</span> साक्षी</p>
+  <p class="g-to" id="guestLine">आपणांस सस्नेह निमंत्रण</p>
+  <button id="openBtn">आमंत्रण उघडा</button>
+</div>
+
+<canvas id="petals" aria-hidden="true"></canvas>
+
+<main>
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <!-- background video (muted, loops). Change the file here if needed -->
+  <video class="hero-bg" autoplay muted loop playsinline preload="auto" poster="photos/2.jpg" aria-hidden="true">
+    <source src="videos/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-frame" aria-hidden="true"></div>
+  <p class="deities h-anim" style="--d:0">।। श्री जानुबाई प्रसन्न ।। श्री गजानन प्रसन्न ।। श्री भैरवनाथ प्रसन्न ।। श्री काळुबाई प्रसन्न ।।</p>
+  <div class="om h-anim" style="--d:1">ॐ</div>
+  <p class="ganesh h-anim" style="--d:1">।। श्री गणेशाय नमः ।।</p>
+  <h2 class="gold-text h-anim" style="--d:2">शुभविवाह</h2>
+  <div class="couple">
+    <div class="who h-anim" style="--d:3"><span class="pre">चि.</span><span class="nm gold-text">अमित</span></div>
+    <svg class="rings h-anim" style="--d:4" viewBox="0 0 76 36" fill="none" stroke="currentColor" stroke-width="2"><circle cx="27" cy="18" r="13"/><circle cx="49" cy="18" r="13"/></svg>
+    <div class="who h-anim" style="--d:5"><span class="pre">चि. सौ. कां.</span><span class="nm gold-text">साक्षी</span></div>
+  </div>
+  <p class="families h-anim" style="--d:6">इंगुळकर परिवार &nbsp;❖&nbsp; यादव परिवार</p>
+  <div class="date-badge h-anim" style="--d:7">बुधवार, दि. <b>२५/११/२०२६</b><br>सायंकाळी <b>६ वा. १८ मि.</b></div>
+  <div class="scroll-cue h-anim" style="--d:9">खाली सरकवा
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+</header>
+
+<!-- ================= COUPLE PHOTOS (shown when CONFIG.photos has files) ================= -->
+<section class="sec jodi" id="gallerySec" hidden>
+  <h2 class="sec-title reveal">लक्ष्मी-नारायणाची जोडी</h2>
+  <div class="orn reveal"><span></span><svg class="orn-ic"></svg><span></span></div>
+  <div class="arch-wrap reveal zoom">
+    <div class="mand mandala"></div>
+    <div class="glow"></div>
+    <span class="bell l" aria-hidden="true"><i></i><b></b></span>
+    <span class="bell r" aria-hidden="true"><i></i><b></b></span>
+    <button class="arch" id="arch" aria-label="फोटो मोठा पहा">
+      <div class="frame" id="slides"><div class="cap">अमित<span>❖</span>साक्षी</div></div>
+    </button>
+  </div>
+  <div class="dots" id="dots"></div>
+</section>
+
+<!-- ================= COUNTDOWN ================= -->
+<section class="cd-wrap">
+  <div class="mand mandala"></div>
+  <div class="sec">
+    <h2 class="sec-title reveal">शुभमुहूर्तास उरलेला वेळ</h2>
+    <div class="orn reveal"><span></span><svg class="orn-ic"></svg><span></span></div>
+    <div class="cd reveal zoom" id="cd">
+      <div><b id="cdD">०</b><span>दिवस</span></div>
+      <div><b id="cdH">०</b><span>तास</span></div>
+      <div><b id="cdM">०</b><span>मिनिटे</span></div>
+      <div><b id="cdS">०</b><span>सेकंद</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LETTER ================= -->
+<section class="sec">
+  <h2 class="sec-title reveal">सस्नेह निमंत्रण</h2>
+  <div class="orn reveal"><span></span><svg class="orn-ic"></svg><span></span></div>
+  <div class="card letter reveal zoom">
+    <svg class="cn tl corner"></svg><svg class="cn tr corner"></svg><svg class="cn bl corner"></svg><svg class="cn br corner"></svg>
+    <p class="salut">स. न. वि. वि. आमचे येथे श्री कृपेकरुन...</p>
+
+    <div class="person reveal">
+      <h3><small>चि.</small>अमित</h3>
+      <p>(कै. बाळु खंडु इंगुळकर यांचा नातु व कै. प्रकाश बाळु इंगुळकर रा. अडवली, ता. राजगड, जि. पुणे, यांचे कनिष्ठ चिरंजीव)</p>
+    </div>
+    <svg class="amp reveal zoom" viewBox="0 0 76 36" fill="none" stroke="currentColor" stroke-width="2"><circle cx="27" cy="18" r="13"/><circle cx="49" cy="18" r="13"/></svg>
+    <div class="person reveal">
+      <h3><small>चि. सौ. कां.</small>साक्षी</h3>
+      <p>(श्री. संजय जगन्नाथ यादव रा. हरणी, ता. पुरंधर, जि. पुणे यांची जेष्ठ कन्या)</p>
+    </div>
+
+    <p class="yancha reveal">।। यांचा शुभविवाह ।।</p>
+    <p class="miti reveal">मिती शके १९४८ वद्य प्रतिपदा</p>
+    <p class="miti reveal">वार बुधवार दि. <span class="hl">२५/११/२०२६</span> रोजी सायं. <span class="hl">६ वा. १८ मि.</span> करण्याचे योजिले आहे.</p>
+    <p class="verse reveal">सप्तपदीच्या प्रदक्षिणा, हळदी कुंकवाचं नाजुक लेणं, अक्षदांचा सुखद वर्षाव आणि मणि मंगळसुत्राचे पावित्र्य घेऊन होणाऱ्या या शुभवैवाहिक सोहळ्यास अंत:करणपुर्वक अपेक्षा आहे ती आपल्या उपस्थितीची आणि शुभाशिर्वादाची!...</p>
+  </div>
+</section>
+
+<!-- ================= EVENTS ================= -->
+<section class="sec" id="events">
+  <h2 class="sec-title reveal">मंगल कार्यक्रम</h2>
+  <div class="orn reveal"><span></span><svg class="orn-ic"></svg><span></span></div>
+  <p class="date-line reveal">बुधवार, दि. २५/११/२०२६</p>
+  <div class="tl" id="tl">
+    <div class="rail"><i></i></div>
+    <div class="ev e1 reveal left">
+      <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="15" r="6"/><path d="M9.5 6.5L12 4l2.5 2.5L12 9z"/></svg></div>
+      <div class="box"><h4>साखरपुडा समारंभ</h4><p class="time">सकाळी ११ वा. ३५ मि.</p><p class="where">विवाहस्थळी</p></div>
+    </div>
+    <div class="ev e2 reveal left">
+      <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18a9 6.5 0 0 1-18 0z"/><path d="M8 9c0-2 2-2 2-4M14 9c0-2 2-2 2-4"/></svg></div>
+      <div class="box"><h4>हळदी समारंभ</h4><p class="time">दुपारी १ वा. ३४ मि.</p><p class="where">विवाहस्थळी</p></div>
+    </div>
+    <div class="ev e3 reveal left">
+      <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/></svg></div>
+      <div class="box"><h4>भोजन समारंभ</h4><p class="time">दुपारी १ ते ४ वाजेपर्यंत</p><p class="where">विवाहस्थळी</p></div>
+    </div>
+    <div class="ev main reveal left">
+      <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 14c2 5 16 5 18 0z"/><path d="M12 3.5c2.2 3 2.2 5.5 0 8-2.2-2.5-2.2-5 0-8z"/></svg></div>
+      <div class="box"><h4>शुभविवाह</h4><p class="time">सायंकाळी ६ वा. १८ मि.</p><p class="where">ज्ञानेश्वर मंगल कार्यालय, अडवली</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VENUE ================= -->
+<section class="sec">
+  <h2 class="sec-title reveal">विवाहस्थळ</h2>
+  <div class="orn reveal"><span></span><svg class="orn-ic"></svg><span></span></div>
+  <div class="venue">
+    <div class="card info reveal left">
+      <h3>ज्ञानेश्वर मंगल कार्यालय</h3>
+      <p>अडवली, ता. राजगड, जि. पुणे</p>
+      <div class="btns">
+        <a class="btn" id="mapBtn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>नकाशा पहा</a>
+        <a class="btn alt" id="calBtn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>कॅलेंडरमध्ये जोडा</a>
+      </div>
+    </div>
+    <div class="map reveal right"><iframe id="mapFrame" loading="lazy" title="विवाहस्थळ नकाशा" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  </div>
+</section>
+
+<!-- ================= FAMILY ================= -->
+<section class="fam-wrap">
+  <div class="paithani" aria-hidden="true"></div>
+  <div class="sec">
+    <h2 class="sec-title reveal">आपले नम्र</h2>
+    <div class="orn reveal"><span></span><svg class="orn-ic"></svg><span></span></div>
+    <div class="block"><div class="pairs" id="namra"></div></div>
+
+    <div class="block t-saffron"><h3 class="reveal">शुभ आशीर्वाद</h3><div class="grid" id="ashirvad"></div></div>
+    <div class="block t-royal"><h3 class="reveal">* सन्माननीय उपस्थिती *</h3><div class="grid" id="honour"></div></div>
+    <div class="block t-peacock"><h3 class="reveal">* स्वागतोत्सुक *</h3><div class="grid" id="welcome"></div></div>
+    <div class="block t-emerald"><h3 class="reveal">निमंत्रक</h3><div class="grid" id="nimantrak"></div></div>
+    <div class="block t-rani">
+      <p class="request reveal">* वरील विनंतीस मान देऊन अगत्य येण्याचे करावे. *</p>
+      <div class="grid" id="agatya"></div>
+    </div>
+    <div class="block t-peacock"><h3 class="reveal">कार्यवाहक</h3><div class="chips" id="karyavahak"></div></div>
+    <div class="block t-saffron"><h3 class="reveal">मित्र-परिवार</h3><div class="chips" id="mitra"></div></div>
+    <div class="block t-emerald"><h3 class="reveal">व्यवस्थापक</h3>
+      <p class="org reveal">श्री भैरवनाथ तरुण मित्र मंडळ अडवली</p>
+      <p class="org reveal">समस्त ग्रामस्थ मंडळ अडवली</p></div>
+    <div class="block"><h3 class="reveal">किलबिल परिवार</h3><div class="chips kids" id="kilbil"></div></div>
+    <div class="block t-rani"><h3 class="reveal">मानाच्या कलवऱ्या</h3><div class="chips kal" id="kalavarya"></div></div>
+  </div>
+  <div class="paithani" aria-hidden="true"></div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="mand mandala"></div>
+  <div class="diyas reveal" aria-hidden="true">
+    <div class="diya"><span class="fl"></span><span class="base"></span></div>
+    <div class="diya"><span class="fl"></span><span class="base"></span></div>
+    <div class="diya"><span class="fl"></span><span class="base"></span></div>
+  </div>
+  <p class="big gold-text reveal">शुभमंगल सावधान</p>
+  <p class="names reveal">अमित &nbsp;❖&nbsp; साक्षी</p>
+  <p class="reveal">आपल्या उपस्थितीची आणि शुभाशीर्वादाची प्रतीक्षा!</p>
+  <div class="btns reveal">
+    <button class="btn alt" id="shareBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>आमंत्रण पुढे पाठवा</button>
+  </div>
+</footer>
+
+<button id="musicBtn" aria-label="संगीत">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+</button>
+<audio id="audio" loop preload="none"></audio>
+
+<div id="lb" role="dialog" aria-modal="true">
+  <button class="x" aria-label="बंद करा">✕</button>
+  <button class="pv" aria-label="मागील">‹</button>
+  <img alt="">
+  <button class="nx" aria-label="पुढील">›</button>
+</div>
+
+<script>
+/* ========================================================
+   SETTINGS — edit these when you have the files
+   ======================================================== */
+const CONFIG = {
+  music:  'music.mp3',   // put an mp3 named music.mp3 next to this file (button hides if missing)
+  photos: ['photos/2.jpg', 'photos/1.jpg'],   // add more: 'photos/3.jpg', ...
+  mapQuery: 'ज्ञानेश्वर मंगल कार्यालय, अडवली, राजगड, पुणे',
+  mapLink: '',           // paste exact Google Maps share link here (optional)
+};
+const WEDDING = new Date('2026-11-25T18:18:00+05:30');
+
+/* ================= DATA (from पत्रिका) ================= */
+const NAMRA = [
+  ['श्रीमती बेबीताई प्रकाश इंगुळकर'],
+  ['सौ. सुलाबाई साधु इंगुळकर','श्री. साधु खंडू इंगुळकर'],
+  ['सौ. मुक्ताबाई काळु इंगुळकर','श्री. काळु बाळु इंगुळकर'],
+  ['सौ. सुनंदा कांता इंगुळकर','श्री. कांता रावजी इंगुळकर'],
+];
+const ASHIRVAD = ['श्रीमती सिताबाई ज्ञानोबा इंगुळकर','श्रीमती तान्हाबाई ज्ञानोबा इंगुळकर','श्रीमती लक्ष्मीबाई महादेव इंगुळकर','श्रीमती रंजना महादेव इंगुळकर','श्रीमती अनुसया अप्पाजी इंगुळकर'];
+const HONOUR = [
+  ['मा. श्री. रावसाहेब कुंजीर','फ्रूट आडतदार'],['मा. श्री. शरद रावसाहेब कुंजीर','फ्रूट आडतदार'],
+  ['मा. श्री. अमोल हरिभाऊ मस्के','फ्रूट आडतदार'],['मा. श्री. अनिरुद्ध अरुणशेठ भोसले','नगरसेवक'],
+  ['मा. श्री. नियाज गुलमोहम्मद शेख','कर सल्लागार'],
+];
+const WELCOME = [
+  ['मा. श्री. नथू भाऊ इंगूळकर','मा. सरपंच'],['मा. श्री. अरविंद तुकाराम काटकर','सा. कार्यकर्ते'],
+  ['मा. श्री. दिलीप लक्ष्मण इंगुळकर','पो. पाटील'],['मा. श्री. गोपाळ दिनकर इंगुळकर','मा. सरपंच'],
+  ['मा. श्री. किसन भिकाजी इंगुळकर','सा. कार्यकर्ते'],['मा. श्री. विश्वास गोपाळ इंगूळकर','सा. कार्यकर्ते'],
+];
+const NIMANTRAK = ['संजय आप्पाजी इंगुळकर','विकास चंद्रकांत इंगुळकर','नितीन प्रकाश इंगुळकर','विशाल काळु इंगुळकर'];
+const AGATYA = [
+  ['निता शंकर ज्ञानोबा इंगुळकर'],['रिना मुकेश ज्ञानोबा इंगुळकर'],
+  ['रत्ना संजय आप्पाजी इंगुळकर'],['सुजाता विकास चंद्रकांत इंगुळकर'],
+  ['मोनिका ज्ञानेश्वर कांता इंगुळकर'],['पुजा दशरथ महादेव इंगुळकर'],
+  ['काजल नितीन प्रकाश इंगुळकर'],['रोहिणी विशाल काळू इंगुळकर'],
+  ['विमल राजाराम सावळा इंगुळकर'],['बायडाबाई नथू भाऊ इंगूळकर'],
+  ['सुमल दिलीप लक्ष्मण इंगूळकर'],['बाळाबाई तुकाराम सोनबा इंगुळकर'],
+  ['सुनंदा कैलास दिनकर इंगुळकर'],['हेमा बाळासाहेब बाजीराव इंगुळकर'],
+  ['सुनिता सुरेश धारु इंगुळकर'],['हिराबाई बबन हरि इंगुळकर'],
+  ['माया बाळु पांडुरंग इंगुळकर'],['अनुसया तानाजी नारायण इंगुळकर'],
+  ['गिता अनंता मारुती इंगुळकर'],['कलाबाई सदाशिव हनुमंत इंगुळकर'],
+  ['सिंधु नंदु शंकर इंगुळकर'],['राधाबाई सर्जेराव शिवराम इंगुळकर'],
+  ['सारिका देवराम निवृत्ती इंगुळकर'],['वर्षा नितीन शांताराम इंगूळकर'],
+  ['रंजना सुरेश मारुती ओंबळे','मामा / मामी'],['पुष्पा अरुण मारुती ओंबळे','मामा / मामी'],
+  ['सुनिता सुनिल एकनाथ धायगावे','मामा / मामी'],['बायडाबाई दत्तु सिदू हारपुडे','आत्या / मामा'],
+  ['अनिता अंकुश नारायण दसवडकर','आत्या / मामा'],['चंद्रभागा सर्जेराव केरबा वालगुडे','आत्या / मामा'],
+  ['मंगल अशोक तुकाराम काटकर','आत्या / मामा'],['पूनम दत्तात्रय साधू यादव','बहीण / जावई'],
+];
+const KARYAVAHAK = ['प्रणव इंगुळकर','आदित्य इंगुळकर','मंगेश इंगुळकर','भरत इंगुळकर','विकास इंगुळकर','योगेश इंगुळकर','सचिन इंगुळकर','रविंद्र बढे','प्रशात इंगुळकर','ऋषीकेश इंगुळकर','चेतन इंगुळकर','शंकर इंगुळकर','अक्षय इंगुळकर','संभाजी इंगुळकर','दिपक इंगुळकर','आकाश इंगुळकर','सागर इंगुळकर','सूरज इंगूळकर','संतोष इंगूळकर','रुपेश इंगूळकर','मच्छिंद्र इंगूळकर','गणेश इंगूळकर','दत्तात्रय इंगूळकर','नितीन शेलार','अक्षय काटकर'];
+const MITRA = ['सागर दसवडकर','समीर चोरघे','विकास वाडघरे','सुमित शेडगे','ऋषीकेश ओंबळे','विजय ओंबळे','संकेत ओंबळे','सचिन धायगावे','रुपेश राजीवडे'];
+const KILBIL = ['कादंबरी','कल्याणी','प्रतिक','सिंधु परशुराम','अंबिका','हर्षदा','जान्हवी','भूमिका','ईश्वरी','अनन्या','सारंग','स्वारांश'];
+const KALAVARYA = ['प्रिया इंगूळकर','श्रावणी इंगूळकर','ज्ञानेश्वरी इंगूळकर','जान्हवी इंगूळकर','हर्षदा इंगूळकर','अवंतिका शिंदे','दीप्ती वालगुडे','मयूरी शिंदे','ज्ञानेश्वरी यादव'];
+
+/* ================= helpers ================= */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const MR = '०१२३४५६७८९';
+const toMr = s => String(s).replace(/\d/g, d => MR[d]);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* mandala svg */
+function mandala() {
+  let s = '<svg viewBox="-100 -100 200 200" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width=".7">';
+  const rings = [[8,15,5,10],[12,40,8,15],[18,67,7,14],[36,90,3,8]];
+  for (const [n, r, rx, ry] of rings) {
+    for (let i = 0; i < n; i++) s += `<ellipse cx="0" cy="${-r}" rx="${rx}" ry="${ry}" transform="rotate(${(360 / n) * i})"/>`;
+  }
+  [4, 26, 54, 81, 99].forEach(r => s += `<circle r="${r}"/>`);
+  for (let i = 0; i < 18; i++) s += `<circle cx="0" cy="-54" r="1.6" fill="currentColor" transform="rotate(${10 + 20 * i})"/>`;
+  return s + '</g></svg>';
+}
+$$('.mandala').forEach(el => el.innerHTML = mandala());
+const ORN = '<g fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 2l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/><circle cx="15" cy="15" r="3" fill="currentColor"/></g>';
+$$('.orn-ic').forEach(el => { el.setAttribute('viewBox', '0 0 30 30'); el.innerHTML = ORN; });
+const CORNER = '<g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 36V8a6 6 0 0 1 6-6h28"/><path d="M8 30V14a6 6 0 0 1 6-6h16"/><circle cx="8" cy="8" r="3" fill="currentColor"/></g>';
+$$('.corner').forEach(el => { el.setAttribute('viewBox', '0 0 38 38'); el.innerHTML = CORNER; });
+
+/* toran */
+(() => {
+  const t = $('#toran'), n = Math.max(9, Math.round(innerWidth / 46));
+  let h = '';
+  for (let i = 0; i < n; i++) {
+    const len = 2 + (i % 2), y = i % 3 === 1 ? ' y' : '';
+    h += `<div class="strand" style="--d:${(i * -0.37).toFixed(2)}s">` + ('<span class="mg' + y + '"></span>').repeat(len) + '<span class="lf"></span></div>';
+  }
+  t.innerHTML = h;
+})();
+
+/* render names */
+/* split honorific prefix + first Devanagari letter (with conjunct & matra) for the badge */
+const PFX = /^(मा\.\s*श्री\.|श्रीमती|सौ\.\/श्री\.|सौ\.|श्री\.)\s*/;
+const initial = n => (n.match(/^(?:.्)*.[ऀ-ःऺ-ौॎॏ॑-ॗॢॣ]*/u) || [n[0]])[0];
+const av = n => `<span class="av" aria-hidden="true">${esc(initial(n.replace(PFX, '')))}</span>`;
+let k = 0;
+const card = (full, sub) => {
+  const p = (full.match(PFX) || [''])[0].trim(), n = full.replace(PFX, '');
+  return `<div class="nmc reveal" style="--i:${(k++) % 6}">${av(n)}<div class="tx">${p ? `<span class="pfx">${esc(p)}</span> ` : ''}<b>${esc(n)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</div></div>`;
+};
+const side = n => `<div class="side">${av(n)}<span>${esc(n)}</span></div>`;
+$('#namra').innerHTML = NAMRA.map((p, i) => p.length === 1
+  ? `<div class="single reveal zoom">${av(p[0])}<b>${esc(p[0])}</b></div>`
+  : `<div class="pair reveal" style="--i:${i}">${side(p[0])}<i>❖</i>${side(p[1])}</div>`).join('');
+$('#ashirvad').innerHTML = ASHIRVAD.map(n => card(n)).join('');
+$('#honour').innerHTML = HONOUR.map(([n, r]) => card(n, r)).join('');
+$('#welcome').innerHTML = WELCOME.map(([n, r]) => card(n, r)).join('');
+$('#nimantrak').innerHTML = NIMANTRAK.map(n => card(n)).join('');
+$('#agatya').innerHTML = AGATYA.map(([n, r]) => card('सौ./श्री. ' + n, r)).join('');
+const chips = (id, arr) => $(id).innerHTML = arr.map((n, i) => `<span class="chip reveal zoom" style="--i:${i % 10}">${esc(n)}</span>`).join('');
+chips('#karyavahak', KARYAVAHAK); chips('#mitra', MITRA); chips('#kilbil', KILBIL); chips('#kalavarya', KALAVARYA);
+
+/* guest name from link:  index.html?n=श्री. रमेश पाटील */
+const guest = new URLSearchParams(location.search).get('n');
+if (guest) $('#guestLine').textContent = 'प्रति, ' + guest.trim().slice(0, 60);
+
+/* ================= gate open ================= */
+const audio = $('#audio'), musicBtn = $('#musicBtn');
+let musicOk = false;
+if (CONFIG.music) {
+  audio.src = CONFIG.music;
+  audio.addEventListener('canplay', () => { musicOk = true; musicBtn.classList.add('show'); }, { once: true });
+  audio.addEventListener('error', () => musicBtn.classList.remove('show'));
+}
+function setPlaying(p) { musicBtn.classList.toggle('playing', p); }
+musicBtn.onclick = () => audio.paused ? audio.play().then(() => setPlaying(true)).catch(() => {}) : (audio.pause(), setPlaying(false));
+
+$('#openBtn').onclick = () => {
+  if (CONFIG.music) { audio.load(); audio.play().then(() => setPlaying(true)).catch(() => {}); }
+  $('#gate').classList.add('open');
+  document.body.classList.add('opened');
+  setTimeout(() => { document.body.classList.remove('locked'); }, 600);
+  setTimeout(() => { $('#gate').classList.add('gone'); $('#toran').remove(); $('#gateC').remove(); }, reduce ? 700 : 2300);
+  petals.start(); petals.burst(70);
+};
+
+/* ================= petals ================= */
+const petals = (() => {
+  const cv = $('#petals'), cx = cv.getContext('2d');
+  const COLORS = ['#f59f00', '#fd7e14', '#e8590c', '#c2255c', '#e03131', '#ffd43b', '#fff4e6'];
+  let W, H, dpr, P = [], on = false, base = innerWidth < 700 ? 22 : 36;
+  const rs = () => { dpr = Math.min(devicePixelRatio || 1, 2); W = cv.width = innerWidth * dpr; H = cv.height = innerHeight * dpr; };
+  rs(); addEventListener('resize', rs);
+  const mk = (top, extra) => ({
+    x: Math.random() * W, y: top ? -Math.random() * H * .4 - 20 : Math.random() * H,
+    r: (5 + Math.random() * 7) * dpr, vy: (.5 + Math.random() * 1.1) * dpr, vx: (Math.random() - .5) * .5 * dpr,
+    a: Math.random() * 6.3, va: (Math.random() - .5) * .05, sw: Math.random() * 6.3,
+    c: COLORS[(Math.random() * COLORS.length) | 0], extra
+  });
+  function frame() {
+    if (!on) return;
+    cx.clearRect(0, 0, W, H);
+    for (let i = P.length - 1; i >= 0; i--) {
+      const p = P[i];
+      p.sw += .02; p.x += p.vx + Math.sin(p.sw) * .6 * dpr; p.y += p.vy; p.a += p.va;
+      if (p.y > H + 30) { if (p.extra) { P.splice(i, 1); continue; } Object.assign(p, mk(true)); }
+      cx.save(); cx.translate(p.x, p.y); cx.rotate(p.a); cx.scale(1, Math.abs(Math.cos(p.sw)) * .5 + .5);
+      cx.fillStyle = p.c; cx.beginPath(); cx.ellipse(0, 0, p.r, p.r * .55, 0, 0, 6.283); cx.fill();
+      cx.fillStyle = 'rgba(255,255,255,.28)'; cx.beginPath(); cx.ellipse(-p.r * .3, -p.r * .1, p.r * .4, p.r * .18, 0, 0, 6.283); cx.fill();
+      cx.restore();
+    }
+    requestAnimationFrame(frame);
+  }
+  document.addEventListener('visibilitychange', () => { if (!document.hidden && on && !reduce) requestAnimationFrame(frame); });
+  return {
+    start() { if (reduce || on) return; on = true; for (let i = 0; i < base; i++) P.push(mk(false)); requestAnimationFrame(frame); },
+    burst(n) { if (reduce) return; for (let i = 0; i < n; i++) P.push(mk(true, true)); }
+  };
+})();
+
+/* ================= reveal on scroll ================= */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+$$('.reveal').forEach(el => io.observe(el));
+
+/* timeline rail fill */
+const tl = $('#tl'), rail = $('#tl .rail i');
+function railFill() {
+  const r = tl.getBoundingClientRect(), v = innerHeight * .7;
+  rail.style.setProperty('--p', Math.max(0, Math.min(1, (v - r.top) / r.height)).toFixed(3));
+}
+addEventListener('scroll', railFill, { passive: true }); railFill();
+
+/* ================= countdown ================= */
+const cdEls = ['#cdD', '#cdH', '#cdM', '#cdS'].map(s => $(s));
+let last = [];
+function tick() {
+  let ms = WEDDING - Date.now();
+  if (ms <= 0) {
+    $('#cd').outerHTML = '<p class="cd-done">' + (ms > -864e5 ? 'आज शुभविवाह! शुभमंगल सावधान!' : 'शुभविवाह संपन्न झाला') + '</p>';
+    return clearInterval(timer);
+  }
+  const s = Math.floor(ms / 1000);
+  const v = [Math.floor(s / 86400), Math.floor(s / 3600) % 24, Math.floor(s / 60) % 60, s % 60];
+  v.forEach((n, i) => {
+    if (n !== last[i]) { const el = cdEls[i]; el.textContent = toMr(String(n).padStart(2, '0')); el.classList.remove('tick'); void el.offsetWidth; el.classList.add('tick'); }
+  });
+  last = v;
+}
+const timer = setInterval(tick, 1000); tick();
+
+/* ================= venue / calendar / share ================= */
+const q = encodeURIComponent(CONFIG.mapQuery);
+$('#mapBtn').href = CONFIG.mapLink || 'https://www.google.com/maps/search/?api=1&query=' + q;
+$('#mapFrame').src = 'https://maps.google.com/maps?q=' + q + '&z=14&output=embed';
+$('#calBtn').href = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+  + '&text=' + encodeURIComponent('चि. अमित आणि चि. सौ. कां. साक्षी यांचा शुभविवाह')
+  + '&dates=20261125T124800Z/20261125T163000Z'
+  + '&location=' + encodeURIComponent('ज्ञानेश्वर मंगल कार्यालय, अडवली, ता. राजगड, जि. पुणे')
+  + '&details=' + encodeURIComponent('साखरपुडा: सकाळी ११:३५ · हळदी: दुपारी १:३४ · भोजन: दुपारी १ ते ४ · शुभविवाह: सायं. ६:१८');
+
+$('#shareBtn').onclick = async () => {
+  const url = location.href.split('?')[0];
+  const text = 'शुभविवाह · चि. अमित आणि चि. सौ. कां. साक्षी\nबुधवार, दि. २५/११/२०२६, सायं. ६ वा. १८ मि.\nज्ञानेश्वर मंगल कार्यालय, अडवली\n';
+  if (navigator.share) { try { await navigator.share({ title: document.title, text, url }); return; } catch (e) { if (e.name === 'AbortError') return; } }
+  open('https://wa.me/?text=' + encodeURIComponent(text + url), '_blank');
+};
+
+/* ================= gallery ================= */
+if (CONFIG.photos.length) {
+  $('#gallerySec').hidden = false;
+  const N = CONFIG.photos.length;
+  $('#slides').insertAdjacentHTML('afterbegin', CONFIG.photos.map((src, i) =>
+    `<img src="${esc(src)}" alt="चि. अमित आणि चि. सौ. कां. साक्षी" ${i ? 'loading="lazy"' : ''}>`).join(''));
+  const slides = $$('#slides img');
+  $('#dots').innerHTML = N > 1 ? CONFIG.photos.map((_, i) => `<button aria-label="फोटो ${toMr(i + 1)}"></button>`).join('') : '';
+  const dots = $$('#dots button');
+  let sc = 0, sTimer;
+  const go = i => {
+    sc = (i + N) % N;
+    slides.forEach((im, j) => { if (j === sc) { im.classList.remove('on'); void im.offsetWidth; im.classList.add('on'); } else im.classList.remove('on'); });
+    dots.forEach((d, j) => d.classList.toggle('on', j === sc));
+    clearTimeout(sTimer); if (N > 1) sTimer = setTimeout(() => go(sc + 1), 5000);
+  };
+  go(0);
+  dots.forEach((d, j) => d.onclick = () => go(j));
+  // swipe on phones
+  let tx = null;
+  $('#arch').addEventListener('touchstart', e => tx = e.touches[0].clientX, { passive: true });
+  $('#arch').addEventListener('touchend', e => { if (tx === null) return; const dx = e.changedTouches[0].clientX - tx; tx = null; if (Math.abs(dx) > 40) { go(sc + (dx < 0 ? 1 : -1)); e.preventDefault(); } });
+
+  const lb = $('#lb'), img = $('img', lb); let cur = 0;
+  const show = i => { cur = (i + N) % N; img.src = CONFIG.photos[cur]; img.style.animation = 'none'; void img.offsetWidth; img.style.animation = ''; };
+  $('#arch').onclick = () => { show(sc); lb.classList.add('on'); };
+  $('.x', lb).onclick = () => lb.classList.remove('on');
+  $('.pv', lb).onclick = () => show(cur - 1);
+  $('.nx', lb).onclick = () => show(cur + 1);
+  lb.onclick = e => { if (e.target === lb) lb.classList.remove('on'); };
+  addEventListener('keydown', e => { if (!lb.classList.contains('on')) return;
+    if (e.key === 'Escape') lb.classList.remove('on'); if (e.key === 'ArrowLeft') show(cur - 1); if (e.key === 'ArrowRight') show(cur + 1); });
+}
+
+</script>
+</body>
+</html>
