@@ -254,6 +254,29 @@ body.opened .h-anim{animation:rise 1.1s cubic-bezier(.2,.7,.2,1) forwards;animat
 .venue .info p{color:var(--muted);font-size:18px}
 .map{border-radius:14px;overflow:hidden;border:2px solid var(--gold);min-height:300px;background:#efe3cc}
 .map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.map-card{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  min-height:300px;padding:28px 16px;border-radius:18px;text-decoration:none;text-align:center;color:#fff1cf;
+  border:2px solid transparent;
+  background:radial-gradient(ellipse at 50% 35%,#a3192f,#6b0b1b 60%,#3c0610) padding-box,
+             linear-gradient(135deg,#fff3c4,#d4a537 35%,#8a6110 65%,#f3d27a) border-box;
+  box-shadow:0 26px 50px -26px rgba(107,11,27,.9);transition:transform .3s}
+.map-card:hover{transform:translateY(-4px)}
+.mc-roads{position:absolute;inset:0;opacity:.22;pointer-events:none;
+  background:
+    linear-gradient(28deg,transparent 46%,#f3d27a 46.5% 48%,transparent 48.5%),
+    linear-gradient(-62deg,transparent 60%,#f3d27a 60.5% 61.5%,transparent 62%),
+    linear-gradient(95deg,transparent 22%,#f3d27a 22.5% 23.3%,transparent 23.8%),
+    repeating-linear-gradient(0deg,transparent 0 38px,rgba(243,210,122,.35) 38px 39px),
+    repeating-linear-gradient(90deg,transparent 0 38px,rgba(243,210,122,.35) 38px 39px)}
+.mc-pin{position:relative;width:64px;height:64px;margin-bottom:6px;animation:drop 1.8s ease-in-out infinite}
+.mc-pin svg{width:64px;height:64px;fill:#f3d27a;filter:drop-shadow(0 6px 8px rgba(0,0,0,.5))}
+.mc-pin i{position:absolute;left:50%;bottom:-8px;width:26px;height:8px;margin-left:-13px;border-radius:50%;background:rgba(0,0,0,.35);animation:shadow 1.8s ease-in-out infinite}
+@keyframes drop{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes shadow{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(.6);opacity:.3}}
+.map-card b{position:relative;font-family:'Tiro Devanagari Marathi',serif;font-weight:400;font-size:26px;color:#ffe9a8}
+.mc-sub{position:relative;color:#ffd99a}
+.mc-cta{position:relative;margin-top:14px;padding:9px 20px;border-radius:999px;font-weight:600;color:#5a0815;
+  background:linear-gradient(135deg,#fff3c4,#d4a537);box-shadow:0 8px 20px -8px rgba(0,0,0,.6)}
 .btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}
 .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border:0;border-radius:999px;padding:11px 22px;font-size:17px;font-weight:600;
   background:var(--maroon);color:var(--gold2);box-shadow:0 8px 18px -10px rgba(107,11,27,.8);transition:transform .2s,background .2s}
@@ -629,7 +652,8 @@ const CONFIG = {
   music:  'music.mp3',   // put an mp3 named music.mp3 next to this file (button hides if missing)
   photos: ['photos/2.jpg', 'photos/1.jpg'],   // add more: 'photos/3.jpg', ...
   mapQuery: 'ज्ञानेश्वर मंगल कार्यालय, अडवली, राजगड, पुणे',
-  mapLink: '',           // paste exact Google Maps share link here (optional)
+  mapLink: 'https://share.google/FJgSHivp9Pnloa3',   // exact venue location
+  mapEmbed: '',          // optional "lat,lng" (e.g. '18.2345,73.6789') to show a live embedded map instead of the card
 };
 const WEDDING = new Date('2026-11-25T18:18:00+05:30');
 
@@ -826,7 +850,17 @@ const timer = setInterval(tick, 1000); tick();
 /* ================= venue / calendar / share ================= */
 const q = encodeURIComponent(CONFIG.mapQuery);
 $('#mapBtn').href = CONFIG.mapLink || 'https://www.google.com/maps/search/?api=1&query=' + q;
-$('#mapFrame').src = 'https://maps.google.com/maps?q=' + q + '&z=14&output=embed';
+if (CONFIG.mapEmbed) {
+  $('#mapFrame').src = 'https://maps.google.com/maps?q=' + encodeURIComponent(CONFIG.mapEmbed) + '&z=15&output=embed';
+} else {
+  $('.map').outerHTML = `<a class="map-card reveal right in" href="${esc($('#mapBtn').href)}" target="_blank" rel="noopener">
+    <span class="mc-roads" aria-hidden="true"></span>
+    <span class="mc-pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s-7.5-6.6-7.5-12a7.5 7.5 0 0 1 15 0c0 5.4-7.5 12-7.5 12z"/><circle cx="12" cy="10" r="2.8" fill="#fff3c4"/></svg><i></i></span>
+    <b>ज्ञानेश्वर मंगल कार्यालय</b>
+    <span class="mc-sub">अडवली, ता. राजगड, जि. पुणे</span>
+    <span class="mc-cta">नकाशा उघडण्यासाठी येथे टॅप करा ➜</span>
+  </a>`;
+}
 $('#calBtn').href = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
   + '&text=' + encodeURIComponent('चि. अमित आणि चि. सौ. कां. साक्षी यांचा शुभविवाह')
   + '&dates=20261125T124800Z/20261125T163000Z'
